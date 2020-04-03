@@ -1,20 +1,30 @@
-import React from "react"
+import React from "react";
+import ReactHtmlParser from "react-html-parser";
 
 export default class Welcome extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.base = require("./sub/data/welcome.json");
+
+        this.first = this.base["first"];
+        this.second = this.base["second"];
+        this.third = this.base["third"];
+    }
     render(){
         return(
             <div className="welcome-container">
                 <section className="short-describe">
-                    <header className="describe-header">What is Polish paintings' slider?</header>
-                    <div className="describe-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nihil quos ex doloremque quis, accusamus neque suscipit vel culpa. Perferendis at minima in adipisci minus sequi deleniti doloribus eum.</div>
+                    <header className="describe-header">{this.first["header"]}</header>
+                    <div className="describe-content">{this.first["content"]}</div>
                 </section>
                 <section className="short-describe right">
-                    <header className="describe-header">Why it has been created?</header>
-                    <div className="describe-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nihil quos ex doloremque quis, accusamus neque suscipit vel culpa. Perferendis at minima in adipisci minus sequi deleniti doloribus eum.</div>
+                    <header className="describe-header">{this.second["header"]}</header>
+                    <div className="describe-content">{this.second["content"]}</div>
                 </section>
                 <section className="short-describe center">
-                    <header className="describe-header">Who runs this?</header>
-                    <div className="describe-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nihil quos ex doloremque quis, accusamus neque suscipit vel culpa. Perferendis at minima in adipisci minus sequi deleniti doloribus eum.</div>
+                    <header className="describe-header">{this.third["header"]}</header>
+                    <div className="describe-content">{ReactHtmlParser(this.third["content"])}</div>
                 </section>
             </div>
         );

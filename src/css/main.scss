@@ -18,63 +18,13 @@
     font-family: "Oswald",sans-serif;
     margin-bottom: 40px;
 }
-.img-main-container{
-    width: calc(60% - 10px);
-    padding: 5px;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px;
-    vertical-align: center;
-    .image-container{
-        min-height: 520px;
-        max-height: 520px;
-        width: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        transition: all 0.4s;
-        box-shadow: 1px 1px 10px #000;
-    }
-    .image-title{
-        width: calc(60% - 20px);
-        padding: 10px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 1.4em;
-        font-family: "Oswald",sans-serif;
-        transition: all 0.4s;
+@media screen and (max-width: 592px){
+    .welcome-header{
+        font-size: 2.4em;
     }
 }
-.side-img-container{
-    width: calc(20% - 10px);
-    padding: 5px;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px;
-    vertical-align: bottom;
-    .next-image{
-        max-height: 220px;
-        width: auto;
-        max-width: 80%; 
-        margin-bottom: 200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        cursor: pointer;
-        background-size: cover;
-        clip-path: polygon(0 0, 200px 0, 200px 200px, 0 200px);;
-        transition: all 0.4s;
-    }
-    .right{
-        margin-left: 0;
-    }
-    .hidden{
-        display: none;
+@media screen and (max-width: 469px){
+    .welcome-header{
+        font-size: 1.7em;
     }
 }

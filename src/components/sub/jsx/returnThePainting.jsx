@@ -9,6 +9,14 @@ import Casimir_The_Restorer_coming_back_to_Poland from "../../../images/Casimir_
 import Saint_Stanislaus_assasination from "../../../images/Saint_Stanislaus_assasination.jpg";
 import Reception_of_Jews_in_Poland from "../../../images/Reception_of_Jews_in_Poland.jpg";
 import Boleslaw_Wrymouth_death from "../../../images/Boleslaw_Wrymouth_death.jpeg";
+import Battle_of_Legnica from "../../../images/Battle_of_Legnica.jpg";
+import Przemysl_II_assasination from "../../../images/Przemysl_II_assasination.jpg";
+import Vlad_I_Elbow_High from "../../../images/Vlad_I_Elbow_High.jpg";
+import Lokietek_Breaking_off_agreements from "../../../images/Lokietek_Breaking_off_agreements.jpg";
+import Battle_of_Plowce from "../../../images/Battle_of_Plowce.png";
+import Taking_Ruthenia_again from "../../../images/Taking_Ruthenia_again.png";
+import Reception_of_Jews_2 from "../../../images/Reception_of_Jews_2.jpg";
+import Sejm_of_Wislica from "../../../images/Sejm_of_Wislica.png";
 
 export default class GiveTheImageElement {
     constructor(name){
@@ -45,6 +53,30 @@ export default class GiveTheImageElement {
                 break;
             case "Boleslaw_Wrymouth_death":
                 return Boleslaw_Wrymouth_death;
+                break;
+            case "Battle_of_Legnica":
+                return Battle_of_Legnica;
+                break;
+            case "Przemysl_II_assasination":
+                return Przemysl_II_assasination;
+                break;
+            case "Vlad_I_Elbow_High":
+                return Vlad_I_Elbow_High;
+                break;
+            case "Lokietek_Breaking_off_agreements":
+                return Lokietek_Breaking_off_agreements;
+                break;
+            case "Battle_of_Plowce":
+                return Battle_of_Plowce;
+                break;
+            case "Taking_Ruthenia_again":
+                return Taking_Ruthenia_again;
+                break;
+            case "Reception_of_Jews_2":
+                return Reception_of_Jews_2;
+                break;
+            case "Sejm_of_Wislica":
+                return Sejm_of_Wislica;
                 break;
             default:
                 break;

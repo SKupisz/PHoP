@@ -28,3 +28,35 @@
         margin-right: 40px;
     }
 }
+@media screen and (max-width: 424px){
+    .main-navbar{
+        text-align: center;
+        .nav-item{
+            float: none;
+        }
+        .main-site-item{
+            margin-left: 0;
+        }
+        .contact-item{
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 325px){
+    .main-navbar{
+        height: 150px;
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .contact-item{
+            margin: 0;
+            width: calc(90% - 20px);
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+    }
+}

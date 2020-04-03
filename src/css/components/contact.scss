@@ -39,3 +39,14 @@
         border-radius: 30px;
     }
 }
+@media screen and (max-width: 547px){
+    .contact-header{
+        font-size: 1.6em;
+    }
+    .contact-table{
+       width: calc(90% - 20px); 
+       .contact-table-item{
+           font-size: 1.2em;
+       }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "first": {
+        "header": "What is Polish paintings' slider?",
+        "content": "It's a simple slider with the paintings presenting each part of Polish history. I'll doing my best to fill the gallery with an as big number of arts as possible to make our web app more accurate and historically precise."
+    },
+    "second": {
+        "header": "Why it has been created?",
+        "content": "Well, when it comes to the beginning of this project, it's an interesting story. I was writing down an eseay for my history classes when I realized it could be cool if I had made an app containting the Paintings about not only the period I was writing, but all of the Polish history."
+    },
+    "third": {
+        "header": "Who runs this?",
+        "content": "I am 16 year old web developer and a programming passionate. I'm also interested in Polish history, so that's one of the reasons why I made this app. If you want to know more, go and check <a target = '_blank' href = 'https://github.com/SKupisz'>my github profile</a>."
+    }
+}
