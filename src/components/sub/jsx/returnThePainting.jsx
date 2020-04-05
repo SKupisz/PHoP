@@ -5,6 +5,7 @@ import saint_wojciech from "../../../images/saint_wojciech.png";
 import otton_III from "../../../images/otton_III.jpg";
 import Chrobry_in_Kiev from "../../../images/Chrobry_in_Kiev.jpg";
 import Chrobry_coronation from "../../../images/Chrobry_coronation.jpg";
+import Mieszko_and_Duchess from "../../../images/Mieszko_and_Duchess.jpg";
 import Casimir_The_Restorer_coming_back_to_Poland from "../../../images/Casimir_The_Restorer_coming_back_to_Poland.jpeg";
 import Saint_Stanislaus_assasination from "../../../images/Saint_Stanislaus_assasination.jpg";
 import Reception_of_Jews_in_Poland from "../../../images/Reception_of_Jews_in_Poland.jpg";
@@ -17,6 +18,8 @@ import Battle_of_Plowce from "../../../images/Battle_of_Plowce.png";
 import Taking_Ruthenia_again from "../../../images/Taking_Ruthenia_again.png";
 import Reception_of_Jews_2 from "../../../images/Reception_of_Jews_2.jpg";
 import Sejm_of_Wislica from "../../../images/Sejm_of_Wislica.png";
+import Casimir_the_Great_Grants_a_Privilege_to_Peasants from "../../../images/Casimir_the_Great_Grants_a_Privilege_to_Peasants.jpg";
+import Casimir_the_Great_Listening_to_Peasants from "../../../images/Casimir_the_Great_Listening_to_Peasants.jpg";
 
 export default class GiveTheImageElement {
     constructor(name){
@@ -41,6 +44,9 @@ export default class GiveTheImageElement {
                 break;
             case "Chrobry_coronation":
                 return Chrobry_coronation;
+                break;
+            case "Mieszko_and_Duchess":
+                return Mieszko_and_Duchess;
                 break;
             case "Casimir_The_Restorer_coming_back_to_Poland":
                 return Casimir_The_Restorer_coming_back_to_Poland;
@@ -77,6 +83,12 @@ export default class GiveTheImageElement {
                 break;
             case "Sejm_of_Wislica":
                 return Sejm_of_Wislica;
+                break;
+            case "Casimir_the_Great_Grants_a_Privilege_to_Peasants":
+                return Casimir_the_Great_Grants_a_Privilege_to_Peasants;
+                break;
+            case "Casimir_the_Great_Listening_to_Peasants":
+                return Casimir_the_Great_Listening_to_Peasants;
                 break;
             default:
                 break;

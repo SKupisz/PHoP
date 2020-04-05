@@ -41,6 +41,9 @@ export default class Slider extends React.Component{
         for(let i = 0 ; i < 4; i++){
             helper = helper.substr(helper.indexOf("/")+1);
         }
+        if(helper == ""){
+            helper = "1";
+        }
         if(!(helper == "" || helper == "1" || parseInt(helper) == "NaN")){
             helper = parseInt(helper);
             if(helper > 0 && helper <= this.base["quantity"]){
@@ -64,15 +67,19 @@ export default class Slider extends React.Component{
     changeToLeft(){
         if(this.nowStatus-1 > 0){
             this.nowStatus--;
-            this.rightRef.current.classList.remove("hidden");
+            if(this.state.itemRight != null){
+                this.rightRef.current.classList.remove("hidden");
+                this.rightRef.current.classList.add("fading-out");
+            }
 
-
-            this.rightRef.current.classList.add("fading-out");
+            
             this.centerRef.current.classList.add("fading-out");
             this.leftRef.current.classList.add("fading-out");
             this.returningTheName.changeTheName(this.base["order"]["n"+(this.nowStatus+1)][0]);
             setTimeout(function(){
-                this.rightRef.current.classList.remove("fading-out");
+                if(this.state.itemRight != null){
+                    this.rightRef.current.classList.remove("fading-out");
+                }
                 this.setState({itemRight: this.returningTheName.returnTheImage()}, ()=>{
 
                     this.returningTheName.changeTheName(this.base["order"]["n"+this.nowStatus][0]);
@@ -109,16 +116,22 @@ export default class Slider extends React.Component{
     changeToRight(){
         if(this.nowStatus < this.base["quantity"]){
             this.nowStatus++;
-            this.leftRef.current.classList.remove("hidden");
+            if(this.state.itemLeft != null){
+                this.leftRef.current.classList.remove("hidden");
+            }
             this.rightRef.current.classList.add("fading-out");
             this.centerRef.current.classList.add("fading-out");
-            this.leftRef.current.classList.add("fading-out");
+            if(this.state.itemLeft != null){
+                this.leftRef.current.classList.add("fading-out");
+            }
             this.footerRef.current.classList.add("fading-text-out");
 
             this.returningTheName.changeTheName(this.base["order"]["n"+(this.nowStatus-1)][0]);
             
             setTimeout(function(){
-                this.leftRef.current.classList.remove("fading-out");
+                if(this.state.itemLeft != null){
+                    this.leftRef.current.classList.remove("fading-out");
+                }
                 this.setState({itemLeft: this.returningTheName.returnTheImage()}, () => {
                     this.returningTheName.changeTheName(this.base["order"]["n"+this.nowStatus][0]);
                     let helper = this.base["order"]["n"+this.nowStatus][1];
@@ -175,9 +188,9 @@ export default class Slider extends React.Component{
                 </div>
 
             </div>
-            <Link to = {"/slider/"+(this.nowStatus+1 == this.base["quantity"] ? "": this.nowStatus+1)} ref = {this.linkRightRef}>
+            <Link to = {(this.nowStatus == this.base["quantity"] ? "": "/slider/"+(this.nowStatus+1))} ref = {this.linkRightRef}>
                 <div className="side-img-container right" ref = {this.rightContainerRef}>
-                    <img src={this.state.itemRight} alt="next-image" className="next-image" ref = {this.rightRef} onClick = {() => {this.changeToRight()}}/>
+                {this.state.itemRight == null ? "": <img src={this.state.itemRight} alt="next-image" className="next-image" ref = {this.rightRef} onClick = {() => {this.changeToRight()}}/>}
                 </div>         
             </Link>           
         </section>
